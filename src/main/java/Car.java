@@ -9,6 +9,7 @@ public class Car{
         this.number = number;
     }
 
+
     public String getBrand() {
         return brand;
     }
