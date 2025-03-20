@@ -73,5 +73,4 @@ public class CarMapTest {
         assertEquals(expectedCarBrand, value.getBrand());
     }
 
-
 }
