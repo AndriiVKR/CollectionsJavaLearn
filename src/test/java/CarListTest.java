@@ -13,7 +13,6 @@ public class CarListTest {
             carList.add(new Car("Brand" + i, i));
         }
     }
-
         @Test
         public void whenAdded100ElementsThenSizeMustBe100() {
             assertEquals(100, carList.size());
@@ -72,5 +71,4 @@ public class CarListTest {
         Car carFromList = carList.get(100);
         assertEquals("BMW", carFromList.getBrand());
         }
-
 }

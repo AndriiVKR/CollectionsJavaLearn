@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+public interface CarQueue extends CarCollection{
+    boolean add (Car car);
+    Car peek();
+    Car pole();
 
-public interface CArQueue {
 }
