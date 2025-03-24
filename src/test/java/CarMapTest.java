@@ -1,16 +1,19 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class CarMapTest {
 
-    private CarMap map;
+    private CarMap<CarOwner, Car> map;
 
     @Before
     public void setUp() throws Exception {
         // Here set value of map variable
-        map = new CarHashMap();
+        map = new CarHashMap<>();
     }
 
     @Test
@@ -63,7 +66,7 @@ public class CarMapTest {
     @Test
     public void methodGetMustReturnRightValue() {
         for (int i = 0; i < 100; i++) {
-            CarOwner carOwner = new CarOwner(i, "Name" + 100, "LastName" + 100);
+            CarOwner carOwner = new CarOwner(i, "Name" + i, "LastName" + i);
             Car car = new Car("Brand" + 100, i);
             map.put(carOwner, car);
         }

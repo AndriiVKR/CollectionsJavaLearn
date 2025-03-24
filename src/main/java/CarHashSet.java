@@ -2,17 +2,17 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class CarHashSet implements CarSet {
+public class CarHashSet<T> implements CarSet<T> {
 
 //    private static final int INITIAL_CAPACITY = 16;
 //    private static final double LOAD_FACTOR = 0.75;
 //    private int size = 0;
 //    private Entry[] array = new Entry[INITIAL_CAPACITY];
-    private Map<Car, Object> map = new HashMap<>();
+    private Map<T, Object> map = new HashMap<>();
     private Object object = new Object();
 
     @Override
-    public boolean add(Car car) {
+    public boolean add(T car) {
 //        if (size >= (array.length * LOAD_FACTOR)) {
 //            increaseArray();
 //        }
@@ -52,7 +52,7 @@ public class CarHashSet implements CarSet {
 //    }
 
     @Override
-    public boolean remove(Car car) {
+    public boolean remove(T car) {
 //        int position = getElementPosition(car, array.length);
 //        if (array[position] == null) {
 //            return false;
@@ -80,7 +80,7 @@ public class CarHashSet implements CarSet {
     }
 
     @Override
-    public boolean contains(Car car) {
+    public boolean contains(T car) {
 //        int position = getElementPosition(car, array.length);
 //        if (array[position] == null) {
 //            return false;
@@ -114,12 +114,12 @@ public class CarHashSet implements CarSet {
     }
 
 
-//    private int getElementPosition(Car car, int arrayLength) {
+//    private int getElementPosition(T car, int arrayLength) {
 //        return Math.abs(car.hashCode() % arrayLength);
 //    }
 
     @Override
-    public Iterator<Car> iterator() {
+    public Iterator<T> iterator() {
 //        return new Iterator<Car>() {
 //            int index = 0;
 //            int arrayIndex = 0;

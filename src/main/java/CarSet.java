@@ -1,10 +1,10 @@
-public interface CarSet extends CarCollection{
+public interface CarSet<T> extends CarCollection<T>{
 
-    boolean add(Car car);
-    boolean remove(Car car);
+    boolean add(T car);
+    boolean remove(T car);
     int size();
     void clear();
 
     @Override
-    boolean contains(Car car);
+    boolean contains(T car);
 }

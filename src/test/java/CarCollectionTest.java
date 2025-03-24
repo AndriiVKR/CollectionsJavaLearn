@@ -1,15 +1,17 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Iterator;
+
 import static org.junit.Assert.*;
 
 public class CarCollectionTest {
-    private CarCollection carCollection;
+    private CarCollection<Car> carCollection;
 
 
     @Before
     public void setUp() throws Exception {
-        carCollection = new CarHashSet();
+        carCollection = new CarHashSet<>();
         for (int i = 0; i < 100; i++) {
             carCollection.add(new Car("Brand" + i, i));
         }
@@ -21,12 +23,10 @@ public class CarCollectionTest {
         assertFalse(carCollection.contains(new Car("Brand200", 20)));
     }
 
+
     @Test
     public void testForEach() {
         int index = 0;
-        while (carCollection.iterator().hasNext()) {
-            Car car = carCollection.iterator().next();
-        }
         for (Car car : carCollection) {
             index++;
         }
